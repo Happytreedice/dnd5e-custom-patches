@@ -1,0 +1,177 @@
+/* ========================================================= */
+/*  D&D 5e Custom Patches Styles                             */
+/* ========================================================= */
+
+/* Combat Sidebar Group Initiative */
+.combat-sidebar .combatant-group .group-header .token-initiative {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.combat-sidebar .combatant-group .group-header .group-initiative {
+  font-weight: bold;
+}
+.combat-sidebar .combatant-group .group-header .combatant-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Tool Check Dialog */
+.activity-choice .tool-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  margin-bottom: 8px;
+}
+.tool-check-dialog button[data-action="confirm"] {
+  --button-size: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.activity-choice .tool-check .gold-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+}
+.activity-choice .tool-check .name-stacked {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Mob Attack Chat Card & Dialog */
+.dnd5e2 .chat-card.mob-attack-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: var(--font-size-12);
+}
+.dnd5e2 .chat-card.mob-attack-card .mob-attack-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 4px;
+  border-top: 1px solid var(--dnd5e-color-faint);
+}
+.dnd5e2 .chat-card.mob-attack-card .mob-attack-threshold {
+  margin: 0;
+  font-weight: bold;
+}
+.dnd5e2 .chat-card.mob-attack-card .mob-attack-result,
+.dnd5e2 .chat-card.mob-attack-card .mob-attack-description {
+  margin: 0;
+}
+.dnd5e2.application.mob-attack .mob-attack-config {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dnd5e2.application.mob-attack .mob-attack-target {
+  align-self: center;
+  font-weight: bold;
+}
+.dnd5e2.application.mob-attack select[name="attack"] {
+  width: 100%;
+}
+
+/* Communal Hope (C7d20) in Character Sheet Header */
+.dnd5e2.sheet.actor.character .sheet-header > .right .inspiration.hope {
+  cursor: default;
+}
+.dnd5e2.sheet.actor.character .sheet-header > .right .inspiration.hope input[name="dnd5e-hope"] {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-family: inherit;
+  font-size: 10px;
+  color: #ffffff;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.dnd5e2.sheet.actor.character .sheet-header > .right .inspiration.hope input[name="dnd5e-hope"]::-webkit-outer-spin-button,
+.dnd5e2.sheet.actor.character .sheet-header > .right .inspiration.hope input[name="dnd5e-hope"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Equipment Spellbook */
+.dnd5e2.sheet.item fieldset.spellbook ul.spellbook-spells {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  min-height: 32px;
+}
+.dnd5e2.sheet.item fieldset.spellbook .spellbook-spells > li {
+  padding: 4px 8px;
+}
+.dnd5e2.sheet.item fieldset.spellbook .spellbook-spells .details {
+  align-items: center;
+  gap: 8px;
+}
+.dnd5e2.sheet.item fieldset.spellbook .spellbook-spells .details .gold-icon {
+  --gold-icon-size: 24px;
+}
+.dnd5e2.sheet.item fieldset.spellbook .spellbook-spells .details .content-link {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.dnd5e2.sheet.item fieldset.spellbook .spellbook-spells .details .list-controls {
+  flex: none;
+}
+
+/* Weapon Damage Application in Chat */
+.dnd5e2 .chat-card weapon-damage-application,
+weapon-damage-application {
+  display: block;
+  margin: 0.375rem 0;
+}
+weapon-damage-application .weapon-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-block-size: 36px;
+  border: 1px solid var(--dnd5e-color-gold, #9f9275);
+  border-radius: 4px;
+  padding: 4px;
+  background: var(--dnd5e-color-card, rgba(0, 0, 0, 0.05));
+}
+weapon-damage-application .weapon-select > img {
+  block-size: 28px;
+  inline-size: 28px;
+  flex: 0 0 28px;
+  border: none;
+  border-radius: 3px;
+  object-fit: cover;
+}
+weapon-damage-application .weapon-select > select {
+  flex: 1;
+  min-inline-size: 0;
+  font-family: var(--dnd5e-font-roboto-slab, serif);
+  font-size: var(--font-size-12, 12px);
+  font-weight: bold;
+}
+weapon-damage-application .weapon-damage-empty {
+  text-align: center;
+  font-size: var(--font-size-12, 12px);
+  color: var(--color-text-secondary, #888);
+  margin: 0;
+}
+weapon-damage-application .card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-top: 0.375rem;
+}
+weapon-damage-application .card-buttons button {
+  width: 100%;
+}

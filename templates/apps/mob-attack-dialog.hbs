@@ -1,0 +1,45 @@
+<section class="mob-attack-config">
+
+    <fieldset>
+        <legend>{{ localize "DND5E.COMBAT.MobAttack.Target" }}</legend>
+
+        {{#if target}}
+        <div class="form-group">
+            <label>{{ localize "DND5E.Target" }}</label>
+            <div class="form-fields">
+                <span class="mob-attack-target">{{ target }}</span>
+            </div>
+        </div>
+        {{/if}}
+
+        {{ formField ac.field name=ac.name value=ac.value localize=true }}
+    </fieldset>
+
+    <fieldset>
+        <legend>{{ localize "DND5E.COMBAT.MobAttack.Mob" }}</legend>
+
+        {{ formField attackers.field name=attackers.name value=attackers.value localize=true }}
+    </fieldset>
+
+    <fieldset>
+        <legend>{{ localize "DND5E.COMBAT.MobAttack.Attack" }}</legend>
+
+        <div class="form-group">
+            <label>{{ localize "DND5E.COMBAT.MobAttack.AttackChoice" }}</label>
+            <div class="form-fields">
+                <select name="attack">
+                    {{#each attackGroups}}
+                    <optgroup label="{{ label }}">
+                        {{#each options}}
+                        <option value="{{ value }}">{{ label }}</option>
+                        {{/each}}
+                    </optgroup>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+
+        {{ formField count.field name=count.name value=count.value localize=true }}
+    </fieldset>
+
+</section>

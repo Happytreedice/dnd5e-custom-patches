@@ -1,0 +1,28 @@
+{{!-- Equipment Spellbook Injection --}}
+
+{{#if source.spellbook.enabled}}
+<fieldset class="spellbook">
+    <legend>{{ localize "DND5E.EQUIPMENT.Spellbook.Spells" }}</legend>
+    <p class="hint">{{ localize "DND5E.EQUIPMENT.Spellbook.DropHint" }}</p>
+    <ul class="separated-list spellbook-spells">
+        {{#each spellbook.spells}}
+        <li data-uuid="{{ uuid }}">
+            <div class="details flexrow">
+                <img class="gold-icon" src="{{ img }}" alt="{{ name }}">
+                {{{ link }}}
+                {{#if @root.editable}}
+                <div class="list-controls flexrow">
+                    <button type="button" class="unbutton control-button" data-action="spellbookRemoveSpell"
+                            data-tooltip aria-label="{{ localize 'DND5E.EQUIPMENT.Spellbook.Action.RemoveSpell' }}">
+                        <i class="fas fa-trash" inert></i>
+                    </button>
+                </div>
+                {{/if}}
+            </div>
+        </li>
+        {{else}}
+        <li class="empty">{{ localize "DND5E.EQUIPMENT.Spellbook.Empty" }}</li>
+        {{/each}}
+    </ul>
+</fieldset>
+{{/if}}

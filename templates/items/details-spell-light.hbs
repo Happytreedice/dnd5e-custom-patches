@@ -1,0 +1,42 @@
+{{#if hasLightSource}}
+<div class="form-group split-group">
+    <label>{{ localize "DND5E.SPELL.LightSource.Label" }}</label>
+    <div class="form-fields">
+        {{!-- Dim Radius --}}
+        <div class="form-group label-top">
+            <label>{{ localize "DND5E.SPELL.LightSource.Dim" }}</label>
+            <div class="form-fields">
+                <input type="number" name="flags.dnd5e-custom-patches.light.dim" value="{{ light.dim }}" step="any">
+            </div>
+        </div>
+
+        {{!-- Bright Radius --}}
+        <div class="form-group label-top">
+            <label>{{ localize "DND5E.SPELL.LightSource.Bright" }}</label>
+            <div class="form-fields">
+                <input type="number" name="flags.dnd5e-custom-patches.light.bright" value="{{ light.bright }}" step="any">
+            </div>
+        </div>
+
+        {{!-- Color --}}
+        <div class="form-group label-top">
+            <label>{{ localize "DND5E.SPELL.LightSource.Color" }}</label>
+            <div class="form-fields">
+                <input type="color" name="flags.dnd5e-custom-patches.light.color" value="{{ light.color }}">
+            </div>
+        </div>
+
+        {{!-- Animation Type --}}
+        <div class="form-group label-top">
+            <label>{{ localize "DND5E.SPELL.LightSource.Animation" }}</label>
+            <div class="form-fields">
+                {{!-- CONFIG.Canvas.lightAnimations values are objects ({label, animation, ...shaders}), so the label key
+                      must be named (Foundry v14 client/applications/handlebars.mjs selectOptions -> createSelectInput labelAttr) --}}
+                <select name="flags.dnd5e-custom-patches.light.animation.type">
+                    {{ selectOptions lightAnimationChoices selected=light.animation.type blank="DND5E.None" labelAttr="label" localize=true }}
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

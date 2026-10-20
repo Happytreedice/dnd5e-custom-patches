@@ -1,0 +1,23 @@
+<div class="chat-card mob-attack-card">
+
+    {{!-- Summary --}}
+    <p class="mob-attack-description">{{ description }}</p>
+
+    {{!-- Threshold and outcome --}}
+    <div class="mob-attack-group">
+        <p class="mob-attack-threshold">{{ threshold }}</p>
+        <p class="mob-attack-result">{{ result }}</p>
+    </div>
+
+    {{!-- Aggregate damage for every attack that landed --}}
+    {{#if buttons.length}}
+    <div class="card-buttons">
+        {{#each buttons}}
+        <button type="button" {{ dnd5e-dataset dataset }}>
+            <i class="fa-solid fa-burst" inert></i> <span>{{ label }}</span>
+        </button>
+        {{/each}}
+    </div>
+    {{/if}}
+
+</div>

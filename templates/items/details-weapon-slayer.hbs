@@ -1,0 +1,22 @@
+{{#if hasSlayer}}
+<div class="form-group split-group">
+    <label>{{ localize "DND5E.ITEM.Property.Slayer" }}</label>
+    <div class="form-fields">
+        <div class="form-group label-top">
+            <label>{{ localize "DND5E.WEAPON.Slayer.CreatureType" }}</label>
+            <div class="form-fields">
+                {{!-- CONFIG.DND5E.creatureTypes values are objects ({label, plural, icon, ...}), so the label key must be named --}}
+                <select name="flags.dnd5e-custom-patches.slayer.type">
+                    {{ selectOptions creatureTypes selected=slayer.type blank="" labelAttr="label" localize=true }}
+                </select>
+            </div>
+        </div>
+        <div class="form-group label-top">
+            <label>{{ localize "DND5E.WEAPON.Slayer.Formula" }}</label>
+            <div class="form-fields">
+                <input type="text" name="flags.dnd5e-custom-patches.slayer.formula" value="{{ slayer.formula }}" placeholder="1d6">
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,14 @@
+{{#if spellbook}}
+<fieldset class="spellbook-target">
+    <legend>{{ localize "DND5E.EQUIPMENT.Spellbook.Title" }}</legend>
+    <div class="form-group">
+        <label for="{{ partId }}-spellbook">{{ localize "DND5E.EQUIPMENT.Spellbook.Advancement.Label" }}</label>
+        <div class="form-fields">
+            <select name="spellbook" id="{{ partId }}-spellbook">
+                {{ selectOptions spellbook.options selected=spellbook.value }}
+            </select>
+        </div>
+    </div>
+    <p class="hint">{{ localize "DND5E.EQUIPMENT.Spellbook.Advancement.Hint" }}</p>
+</fieldset>
+{{/if}}

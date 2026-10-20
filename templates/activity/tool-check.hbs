@@ -1,0 +1,14 @@
+<section>
+    <div class="tool-check"{{#if uuid}} data-uuid="{{ uuid }}"{{/if}}>
+        <img class="gold-icon" src="{{ img }}" alt="{{ label }}">
+        <div class="name-stacked">
+            <span class="title">{{ label }}</span>
+            {{#if subtitle}}<span class="subtitle">{{ subtitle }}</span>{{/if}}
+        </div>
+    </div>
+
+    <button type="button" data-action="confirm">
+        <i class="fa-solid fa-hammer" inert></i>
+        <span>{{ localize "DND5E.CHECK.Tool.Roll" }}</span>
+    </button>
+</section>

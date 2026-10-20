@@ -1,0 +1,62 @@
+{
+  "id": "dnd5e-custom-patches",
+  "title": "D&D 5e Custom Patches",
+  "description": "Кастомные расширения и патчи для системы D&D 5e: атаки толпы (Handling Mobs), правила C7d20 (Communal Hope), свойства заклинаний и оружия (Light Source, Weapon Damage, Slayer), книги заклинаний в экипировке, значки активных эффектов на токенах и системные оптимизации, а также фильтр круга заклинаний при повышении уровня (выбор заклинаний не начинается с заговоров), критические попадания для активности «Спасбросок», защита подсказок от гонки и светлая тема журнала чата dnd5e по умолчанию.",
+  "version": "1.6.0",
+  "compatibility": {
+    "minimum": "13.347",
+    "verified": "14.369"
+  },
+  "authors": [
+    {
+      "name": "Happytreedice",
+      "url": "https://github.com/Happytreedice",
+      "flags": {
+        "donate": "https://boosty.to/happytreedice"
+      }
+    }
+  ],
+  "flags": {
+    "donate": "https://boosty.to/happytreedice"
+  },
+  "license": "LICENSE",
+  "url": "https://github.com/Happytreedice/dnd5e-custom-patches",
+  "manifest": "https://github.com/Happytreedice/dnd5e-custom-patches/releases/latest/download/module.json",
+  "download": "https://github.com/Happytreedice/dnd5e-custom-patches/releases/download/v1.6.0/dnd5e-custom-patches.zip",
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "6.0.0",
+          "verified": "6.0.6"
+        }
+      }
+    ]
+  },
+  "documentTypes": {
+    "ChatMessage": {
+      "mobAttack": {}
+    }
+  },
+  "esmodules": [
+    "scripts/module.mjs"
+  ],
+  "styles": [
+    "styles/dnd5e-custom-patches.css"
+  ],
+  "socket": true,
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Русский",
+      "path": "lang/ru.json"
+    }
+  ]
+}

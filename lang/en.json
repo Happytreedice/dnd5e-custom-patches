@@ -1,0 +1,268 @@
+{
+  "DND5E": {
+    "CHECK": {
+      "Tool": {
+        "DialogTitle": "{name}: Tool Check",
+        "Roll": "Roll Check",
+        "WarningNoTool": "{name}: no tool is assigned. Use the transformation enchantment on the item to choose which tool it becomes.",
+        "WarningNotAttuned": "{name} requires attunement before it can be used."
+      }
+    },
+    "COMBAT": {
+      "MobAttack": {
+        "Attack": "Attack",
+        "AttackChoice": "Attack used",
+        "AttackCount": "Attacks per creature",
+        "AttackCountHint": "Number of attacks each creature makes with this option (multiattack).",
+        "Attackers": "Attackers",
+        "DamageButton": "Damage: {name} ({hits})",
+        "DamageFlavor": "{name} - mob attack, hits: {hits}",
+        "HitFlavor": "{name} - mob attack, hit {current} of {total}",
+        "Hits": "Hits: {hits}.",
+        "Leftover": "Not hitting: {leftover}.",
+        "MessageCap": "Posted {posted} hit messages out of {hits}; roll the remaining damage from the summary card.",
+        "MissingActivity": "The attack used for this mob attack is no longer available.",
+        "MissingActor": "This group has no creature that can attack.",
+        "Mob": "Mob",
+        "NoAttacks": "These creatures have no attacks to make.",
+        "OptionLabel": "{name} ({toHit}, {damage})",
+        "OptionLabelNoDamage": "{name} ({toHit})",
+        "Ratio": "For every {per} attackers, one of them hits.",
+        "RatioOne": "Every attacker hits.",
+        "Resolve": "Resolve",
+        "ResultImpossible": "These attacks cannot hit the target.",
+        "ResultNone": "Fewer than {per} attackers: no hits.",
+        "Summary": "{name} ({attackers}) attacks {target} (AC {ac}).",
+        "SummaryNoTarget": "{name} ({attackers}) makes a mob attack against AC {ac}.",
+        "Target": "Target",
+        "Threshold": "{name}: required d20 result {required} (attack bonus {bonus}).",
+        "ThresholdImpossible": "{name}: required d20 result {required} (attack bonus {bonus}) - a hit is impossible.",
+        "Title": "Mob Attack"
+      }
+    },
+    "CurrencyAbbrRS": "res",
+    "CurrencyRS": "Resources",
+    "EQUIPMENT": {
+      "Spellbook": {
+        "Action": {
+          "RemoveSpell": "Remove Spell"
+        },
+        "Advancement": {
+          "Hint": "Spells chosen at this level will be recorded into the selected spellbook. While the book is equipped its spells are available to the owner. Drag & drop a spellbook from the character's inventory to select it.",
+          "Label": "Record into",
+          "None": "Do not record"
+        },
+        "DropHint": "Drag & drop spells here to add them to the book.",
+        "Empty": "No spells in this book yet.",
+        "Hint": "While this item is equipped, its spells are added to the owner's spell list.",
+        "Spells": "Spells",
+        "Title": "Spellbook",
+        "Warning": {
+          "Duplicate": "This spell is already in the book.",
+          "NotOwned": "The spellbook must be in the character's inventory."
+        }
+      }
+    },
+    "HopeLabel": "Hope",
+    "HopeTooltip": "Communal Hope (C7d20): a single pool shared by every player. Any player may change it.",
+    "ITEM": {
+      "Property": {
+        "Slayer": "Slayer",
+        "LightSource": "Light Source",
+        "WeaponDamage": "Weapon Damage"
+      }
+    },
+    "SkillFrl": "Forgotten Lore",
+    "SkillLcl": "Local Lore",
+    "SkillNtl": "Natural Lore",
+    "SPELL": {
+      "LightSource": {
+        "Label": "Light Source",
+        "Dim": "Dim Radius",
+        "Bright": "Bright Radius",
+        "Color": "Color",
+        "Animation": "Animation"
+      }
+    },
+    "WEAPON": {
+      "Slayer": {
+        "CreatureType": "Creature Type",
+        "Formula": "Bonus Damage"
+      }
+    },
+    "WEAPONDAMAGE": {
+      "Select": "Weapon for the attack",
+      "Warning": {
+        "NoWeapon": "The caster has no weapon.",
+        "NoAttack": "The selected weapon has no attack activity."
+      }
+    }
+  },
+  "SETTINGS": {
+    "DND5E": {
+      "RULESVERSION": {
+        "C7d20": "C7d20 Rules (Cubicle 7)"
+      },
+      "HOPE": {
+        "Name": "Communal Hope",
+        "Hint": "The shared Hope pool used by the C7d20 rules. Stored on the world and edited from any character header."
+      }
+    }
+  },
+  "TYPES": {
+    "ChatMessage": {
+      "dnd5e-custom-patches.mobAttack": "Mob Attack"
+    }
+  },
+  "D&D5e": {
+    "AbilityStr": "<p>Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.</p>",
+    "AbilityDex": "<p>Dexterity measures agility, reflexes, and balance.</p>",
+    "AbilityCon": "<p>Constitution measures health, stamina, and vital force.</p>",
+    "AbilityInt": "<p>Intelligence measures mental acuity, accuracy of recall, and the ability to reason.</p>",
+    "AbilityWis": "<p>Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.</p>",
+    "AbilityCha": "<p>Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence.</p>",
+    "SkillAcr": "<p>Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you're trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship's deck.</p>",
+    "SkillAni": "<p>When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal's intentions, the GM might call for a Wisdom (Animal Handling) check.</p>",
+    "SkillArc": "<p>Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.</p>",
+    "SkillAth": "<p>Your Strength (Athletics) check covers difficult situations you encounter while climbing, jumping, or swimming.</p>",
+    "SkillDec": "<p>Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions.</p>",
+    "SkillHis": "<p>Your Intelligence (History) check measures your ability to recall lore about historical events, legendary people, ancient kingdoms, past disputes, recent wars, and lost civilizations.</p>",
+    "SkillIns": "<p>Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move.</p>",
+    "SkillItm": "<p>When you attempt to influence someone through overt threats, hostile actions, and physical violence, the GM might ask you to make a Charisma (Intimidation) check.</p>",
+    "SkillInv": "<p>When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check.</p>",
+    "SkillMed": "<p>A Wisdom (Medicine) check lets you try to stabilize a dying companion or diagnose an illness.</p>",
+    "SkillNat": "<p>Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles.</p>",
+    "SkillPrc": "<p>Your Wisdom (Perception) check lets you spot, hear, or otherwise detect the presence of something. It measures your general awareness of your surroundings and the keenness of your senses.</p>",
+    "SkillPrf": "<p>Your Charisma (Performance) check determines how well you can delight an audience with music, dance, acting, storytelling, or some other form of entertainment.</p>",
+    "SkillPer": "<p>When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion) check.</p>",
+    "SkillRel": "<p>Your Intelligence (Religion) check measures your ability to recall lore about deities, rites and prayers, religious hierarchies, holy symbols, and the practices of secret cults.</p>",
+    "SkillSlt": "<p>Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check.</p>",
+    "SkillSte": "<p>Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.</p>",
+    "SkillSur": "<p>The GM might ask you to make a Wisdom (Survival) check to follow tracks, hunt wild game, guide your group through frozen wastelands, identify signs that owlbears live nearby, predict the weather, or avoid quicksand and other natural hazards.</p>",
+    "SchoolAbj": "<p>Abjuration spells are protective in nature, though some of them have aggressive uses.</p>",
+    "SchoolCon": "<p>Conjuration spells involve the transportation of objects and creatures from one location to another.</p>",
+    "SchoolDiv": "<p>Divination spells reveal information, whether in the form of secrets long forgotten, glimpses of the future, the locations of hidden things, the truth behind illusions, or visions of distant people or places.</p>",
+    "SchoolEnc": "<p>Enchantment spells affect the minds of others, influencing or controlling their behavior.</p>",
+    "SchoolEvo": "<p>Evocation spells manipulate magical energy to produce a desired effect.</p>",
+    "SchoolIll": "<p>Illusion spells deceive the senses or minds of others.</p>",
+    "SchoolNec": "<p>Necromancy spells manipulate the energies of life and death.</p>",
+    "SchoolTrs": "<p>Transmutation spells change the properties of a creature, object, or environment.</p>",
+    "ToolAlchemist": "Alchemist's Supplies",
+    "ToolBagpipes": "Bagpipes",
+    "ToolBrewer": "Brewer's Supplies",
+    "ToolCalligrapher": "Calligrapher's Supplies",
+    "ToolCard": "Playing Cards Set",
+    "ToolCarpenter": "Carpenter's Tools",
+    "ToolCartographer": "Cartographer's Tools",
+    "ToolChess": "Chess Set",
+    "ToolCobbler": "Cobbler's Tools",
+    "ToolCook": "Cook's Utensils",
+    "ToolDice": "Dice Set",
+    "ToolDisg": "Disguise Kit",
+    "ToolDrum": "Drum",
+    "ToolDulcimer": "Dulcimer",
+    "ToolFlute": "Flute",
+    "ToolForg": "Forgery Kit",
+    "ToolGlassblower": "Glassblower's Tools",
+    "ToolHerb": "Herbalism Kit",
+    "ToolHorn": "Horn",
+    "ToolJeweler": "Jeweler's Tools",
+    "ToolLeatherworker": "Leatherworker's Tools",
+    "ToolLute": "Lute",
+    "ToolLyre": "Lyre",
+    "ToolMason": "Mason's Tools",
+    "ToolNavg": "Navigator's Tools",
+    "ToolPainter": "Painter's Supplies",
+    "ToolPanflute": "Pan Flute",
+    "ToolPois": "Poisoner's Kit",
+    "ToolPotter": "Potter's Tools",
+    "ToolShawm": "Shawm",
+    "ToolSmith": "Smith's Tools",
+    "ToolThief": "Thieves' Tools",
+    "ToolTinker": "Tinker's Tools",
+    "ToolViol": "Viol",
+    "ToolWeaver": "Weaver's Tools",
+    "ToolWoodcarver": "Woodcarver's Tools"
+  },
+  "D&D2024": {
+    "AbilityStr": "<p>Strength measures physical might.</p><h3>Strength Checks</h3><p>Make a Strength <strong>check</strong> to lift, push, pull, or break something.</p><h3>Saving Throw</h3><p>Make a Strength saving throw to physically resist direct force.</p>",
+    "AbilityDex": "<p>Dexterity measures agility, reflexes, and balance.</p><h3>Dexterity Checks</h3><p>Make a Dexterity <strong>check</strong> to move nimbly, quickly, or quietly.</p>",
+    "AbilityCon": "<p>Constitution measures health and stamina.</p><h3>Constitution Checks</h3><p>Make a Constitution <strong>check</strong> to push your body beyond normal limits.</p>",
+    "AbilityInt": "<p>Intelligence measures reasoning and memory.</p><h3>Intelligence Checks</h3><p>Make an Intelligence <strong>check</strong> to reason or remember.</p>",
+    "AbilityWis": "<p>Wisdom measures perceptiveness and mental fortitude.</p><h3>Wisdom Checks</h3><p>Make a Wisdom <strong>check</strong> to notice things in the environment or in creatures' behavior.</p>",
+    "AbilityCha": "<p>Charisma measures confidence, poise, and charm.</p><h3>Charisma Checks</h3><p>Make a Charisma <strong>check</strong> to influence, entertain, or deceive.</p>",
+    "SkillAcr": "<p><strong>Examples:</strong> Stay on your feet in a tricky situation, or perform an acrobatic stunt.</p>",
+    "SkillAni": "<p><strong>Examples:</strong> Calm or train an animal, or get an animal to behave in a certain way.</p>",
+    "SkillArc": "<p><strong>Examples:</strong> Recall lore about spells, magic items, and the planes of existence.</p>",
+    "SkillAth": "<p><strong>Examples:</strong> Jump farther than normal, stay afloat in rough water, or break something.</p>",
+    "SkillDec": "<p><strong>Examples:</strong> Tell a convincing lie, or wear a disguise convincingly.</p>",
+    "SkillHis": "<p><strong>Examples:</strong> Recall lore about historical events, people, nations, and cultures.</p>",
+    "SkillIns": "<p><strong>Examples:</strong> Discern a person's mood and intentions.</p>",
+    "SkillItm": "<p><strong>Examples:</strong> Awe or threaten someone into doing what you want.</p>",
+    "SkillInv": "<p><strong>Examples:</strong> Find obscure information in books, or deduce how something works.</p>",
+    "SkillMed": "<p><strong>Examples:</strong> Diagnose an illness, or determine what killed the recently slain.</p>",
+    "SkillNat": "<p><strong>Examples:</strong> Recall lore about terrain, plants, animals, and weather.</p>",
+    "SkillPrc": "<p><strong>Examples:</strong> Using a combination of senses, notice something that's easy to miss.</p>",
+    "SkillPrf": "<p><strong>Examples:</strong> Act, tell a story, perform music, or dance.</p>",
+    "SkillPer": "<p><strong>Examples:</strong> Honestly and graciously convince someone of something.</p>",
+    "SkillRel": "<p><strong>Examples:</strong> Recall lore about gods, religious rituals, and holy symbols.</p>",
+    "SkillSlt": "<p><strong>Examples:</strong> Pick a pocket, conceal a handheld object, or perform legerdemain.</p>",
+    "SkillSte": "<p><strong>Examples:</strong> Escape notice by moving quietly and hiding behind things.</p>",
+    "SkillSur": "<p><strong>Examples:</strong> Follow tracks, forage, find a trail, or avoid natural hazards.</p>",
+    "SchoolAbj": "<p><strong>Abjuration</strong> spells prevent or reverse harmful effects.</p>",
+    "SchoolCon": "<p><strong>Conjuration</strong> spells transport creatures or objects.</p>",
+    "SchoolDiv": "<p><strong>Divination</strong> spells reveal information.</p>",
+    "SchoolEnc": "<p><strong>Enchantment</strong> spells influence minds.</p>",
+    "SchoolEvo": "<p><strong>Evocation</strong> spells channel energy to create effects that are often destructive.</p>",
+    "SchoolIll": "<p><strong>Illusion</strong> spells deceive the mind or senses.</p>",
+    "SchoolNec": "<p><strong>Necromancy</strong> spells manipulate life and death.</p>",
+    "SchoolTrs": "<p><strong>Transmutation</strong> spells transform creatures or objects.</p>",
+    "ToolAlchemist": "Alchemist's Supplies",
+    "ToolBagpipes": "Bagpipes",
+    "ToolBrewer": "Brewer's Supplies",
+    "ToolCalligrapher": "Calligrapher's Supplies",
+    "ToolCard": "Playing Cards Set",
+    "ToolCarpenter": "Carpenter's Tools",
+    "ToolCartographer": "Cartographer's Tools",
+    "ToolChess": "Chess Set",
+    "ToolCobbler": "Cobbler's Tools",
+    "ToolCook": "Cook's Utensils",
+    "ToolDice": "Dice Set",
+    "ToolDisg": "Disguise Kit",
+    "ToolDrum": "Drum",
+    "ToolDulcimer": "Dulcimer",
+    "ToolFlute": "Flute",
+    "ToolForg": "Forgery Kit",
+    "ToolGlassblower": "Glassblower's Tools",
+    "ToolHerb": "Herbalism Kit",
+    "ToolHorn": "Horn",
+    "ToolJeweler": "Jeweler's Tools",
+    "ToolLeatherworker": "Leatherworker's Tools",
+    "ToolLute": "Lute",
+    "ToolLyre": "Lyre",
+    "ToolMason": "Mason's Tools",
+    "ToolNavg": "Navigator's Tools",
+    "ToolPainter": "Painter's Supplies",
+    "ToolPanflute": "Pan Flute",
+    "ToolPois": "Poisoner's Kit",
+    "ToolPotter": "Potter's Tools",
+    "ToolShawm": "Shawm",
+    "ToolSmith": "Smith's Tools",
+    "ToolThief": "Thieves' Tools",
+    "ToolTinker": "Tinker's Tools",
+    "ToolViol": "Viol",
+    "ToolWeaver": "Weaver's Tools",
+    "ToolWoodcarver": "Woodcarver's Tools"
+  },
+  "DND5ECP": {
+    "Settings": {
+      "ShowAllApplied": {
+        "Name": "Show icons of all applied effects",
+        "Hint": "Also draw a token icon for applied (non-transferred) effects that have no duration. Off: Foundry draws an icon only while an effect is temporary, which is the meaning of the \"Conditional\" value of its Display Icon field."
+      }
+    },
+    "EffectIcons": {
+      "Repaired": "D&D 5e Custom Patches: restored the token icon of {count} active effect(s) silenced by the DAE migration."
+    }
+  }
+}
