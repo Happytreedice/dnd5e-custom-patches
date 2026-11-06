@@ -646,28 +646,4 @@ export function initEngineFixes() {
   Hooks.on("deleteActiveEffect", (effect) => {
     endEffectAnimations(effect);
   });
-
-  // 17. Roll data of actors: every status of CONFIG.statusEffects is present (0 when the actor does not have it).
-  // dnd5e 6.0.6 fills rollData.statuses only with the active statuses; the stock effect changes that reference an
-  // absent one ("1 - @statuses.deafened" of Echolocation, dnd5e.monsters) fail in core's replaceFormulaData
-  // ("Unable to replace all data references") and the change is skipped. With zeros the formula evaluates.
-  const zeroFillStatuses = () => {
-    const ActorClass = CONFIG.Actor?.documentClass;
-    if (typeof ActorClass?.prototype?.getRollData !== "function" || ActorClass.prototype._statusesZeroFilled) return false;
-    const origGetRollData = ActorClass.prototype.getRollData;
-    ActorClass.prototype.getRollData = function (...args) {
-      const rollData = origGetRollData.apply(this, args);
-      if (rollData && typeof rollData === "object") {
-        const statuses = (rollData.statuses && typeof rollData.statuses === "object") ? rollData.statuses : (rollData.statuses = {});
-        for (const status of CONFIG.statusEffects ?? []) {
-          if (status?.id && !(status.id in statuses)) statuses[status.id] = 0;
-        }
-      }
-      return rollData;
-    };
-    ActorClass.prototype._statusesZeroFilled = true;
-    log("Roll data statuses: every status present (0 when absent).");
-    return true;
-  };
-  if (!zeroFillStatuses()) Hooks.once("setup", zeroFillStatuses);   // the system's actor class is set in its init hook
 }
