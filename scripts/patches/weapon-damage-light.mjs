@@ -1,6 +1,24 @@
 import { MODULE_ID, log } from "../utils/patch-helper.mjs";
 
 /**
+ * Spells that always get the weapon block, found by their `system.identifier` (the slug of the English name in dnd5e
+ * and in the happytreedice-5etools compendium). The `weaponDamage` property is set by hand on a spell's sheet and is
+ * lost whenever the spell is replaced by a fresh copy from a compendium (the actor's Green-Flame Blade and Booming
+ * Blade stopped working after such a replacement), so these two do not depend on it.
+ */
+const DEFAULT_WEAPON_DAMAGE_SPELLS = new Set(["booming-blade", "green-flame-blade"]);
+
+/**
+ * Does this spell offer the weapon block? True with the `weaponDamage` property or for a default spell above.
+ * @param {Item5e|null|undefined} item
+ * @returns {boolean}
+ */
+export function hasWeaponDamage(item) {
+  if (item?.type !== "spell") return false;
+  return !!item.system?.properties?.has?.("weaponDamage") || DEFAULT_WEAPON_DAMAGE_SPELLS.has(item.system?.identifier);
+}
+
+/**
  * Chat-card block for spells with the `weaponDamage` property (Green-Flame Blade, Booming Blade, …): a dropdown of the
  * caster's equipped weapons with the first one pre-selected, plus Attack and Damage buttons that roll with the chosen
  * weapon; Damage adds the spell's own damage parts after the weapon's.
@@ -333,7 +351,7 @@ export function initWeaponDamageAndLight() {
     if (!["usage", "item"].includes(message.type)) return;
 
     const item = message.getAssociatedItem?.() ?? fromUuidSync(message.flags?.dnd5e?.item?.uuid ?? "", { strict: false });
-    if (item?.type !== "spell" || !item.system?.properties?.has?.("weaponDamage")) return;
+    if (!hasWeaponDamage(item)) return;
 
     // dnd5e 5.3.3 card markup (templates/chat/activity-card.hbs, item-card.hbs): <div class="chat-card"> holds
     // <section class="card-header description collapsible"> (whose ".card-content" child is the collapsible, possibly
